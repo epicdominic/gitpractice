@@ -1,14 +1,21 @@
 pipeline {
     agent any
+
     stages {
-        stage ('Compile Stage') {
+        stage('Build') {
             steps {
-                #!/usr/bin/env groovy
-node {
-echo 'Hello World'
-}
+                echo 'Building..'
             }
         }
-
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
